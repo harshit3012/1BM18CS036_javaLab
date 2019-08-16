@@ -1,2 +1,2 @@
-# 1BM18CS036_javaLab
+# 1BM18CS036
 # Harshit Hiremath

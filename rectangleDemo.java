@@ -1,5 +1,4 @@
-//Author:Harshit Hiremath
-//1BM18CS036
+//Program to print the area of 2 rectangles using classes.
 
 import java.util.*;
 class Rectangle{

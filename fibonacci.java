@@ -1,5 +1,4 @@
 //Program to print nth term of the Fibonacci series
-//1BM18CS036
 import java.util.*;
 public class fibonacci {
     public static void main(String[] args){

@@ -9,15 +9,15 @@ class Rectangle{
 	int area;
 
 	void input(){
-	Scanner sc=new Scanner(System.in);
-	System.out.println("Enter the length and width-");
-	len=sc.nextInt();
-	wid=sc.nextInt();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the length and width-");
+		len=sc.nextInt();
+		wid=sc.nextInt();
 	}
 
 	void output(){
-	area=len*wid;
-	System.out.println("The length is-" + len + "\nWidth is-" + wid + " \nThe calculated area is-" + area);
+		area=len*wid;
+		System.out.println("The length is-" + len + "\nWidth is-" + wid + " \nThe calculated area is-" + area);
 	}
 }
 

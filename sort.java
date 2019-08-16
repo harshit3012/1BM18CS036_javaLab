@@ -1,5 +1,5 @@
-//Author:Harshit Hiremath
-//1BM18CS036
+//Program to sort a given 1D array in ascending order.
+
 import java.util.*;
 public class sort
 {

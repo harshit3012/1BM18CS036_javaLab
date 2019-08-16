@@ -1,6 +1,4 @@
-//Author:Harshit Hiremath
-//1BM18CS036
-
+//Program to output the sum and difference of elements of two 2D arrays.
 import java.util.*;
 class matrix {
     public static void main(String[] args) {

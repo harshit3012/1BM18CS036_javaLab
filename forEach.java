@@ -1,4 +1,5 @@
-//Program to print the maximum(greatest) element in a given 2D Array
+//Program to print the maximum(greatest) element in a given 2D Array.
+
 import java.util.*;
 class forEach {
     public static void main(String[] args){

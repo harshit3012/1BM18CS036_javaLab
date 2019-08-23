@@ -19,7 +19,7 @@ class TIME{
         s = z;
     }
     void add(int a,  int b, int c){
-        s += c;
+        s = s + c;
         m = m + b + (s/60);
         s = s%60;
         h = h + a + (m/60);

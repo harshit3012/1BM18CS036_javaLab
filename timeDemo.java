@@ -1,3 +1,5 @@
+//Program to add some time to other input time, To display the time, To reset the time
+//1BM18CS036
 import java.util.*;
 class TIME{
     int h, m, s;

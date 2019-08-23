@@ -1,66 +1,81 @@
 //Program to Calculate Net Salary of employers and Display them
 //1BM18CS036
 import java.util.*;
-import java.io.PrintStream;
-class employee{
+class TIME{
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED = "\u001B[31m";
-    Scanner sc=new Scanner(System.in);
-    String name, empnum;
-    double basic, gs, it, ns;
-    int a;
-    void employee(){
-        name="";
-        empnum="";
-        basic=0;
-        gs=0;
-        it=0;
-        ns=0;
-
+    int h, m, s;
+    TIME(){
+        h = 0;
+        m = 0;
+        s = 0;
     }
-    void input(int i){
-        a=i;
-        System.out.println(ANSI_RESET+"Enter the name of the Employee "+ (a+1) + " -");
-        name = sc.next();
-        System.out.println("Enter the Employer number of "+ ANSI_RED + name + ANSI_RESET+" -");
-        empnum = sc.next();
-        System.out.println("Enter the Basic salary "+ ANSI_RED+name+ANSI_RESET + " -");
-        basic = sc.nextDouble();
+    void currentTIME(int x, int y, int z){
+        h = x;
+        m = y;
+        s = z;
     }
-    void calc(){
-        gs=basic+(0.75*basic);
-        it=gs*0.3;
-        ns=gs-it;
+    void add(int a,  int b, int c){
+        s += c;
+        m = m + b + (s/60);
+        s = s%60;
+        h = h + a + (m/60);
+        m = m%60;
+        h = h%24;
     }
     void display(){
-        System.out.print("\nSalary details of "+ ANSI_RED+name+" (Employer Number - "+empnum+")"+ANSI_RESET);
-        System.out.print("\n\nBasic Salary                       +");
-        System.out.printf("%28.3f%n", basic);
-        System.out.print("Dearness Allowance                 +");
-        System.out.printf("%28.3f%n", 0.75*basic);
-        System.out.print("________________________________________________________________\n");
-        System.out.print("Gross Salary                       =");
-        System.out.printf("%28.3f%n",gs);
-        System.out.print("Income Tax                         -");
-        System.out.printf("%28.3f%n",it);
-        System.out.print("________________________________________________________________");
-        System.out.print("\nNet Salary                         = ");
-        System.out.printf("%27.3f%n", ns);
-        System.out.print("________________________________________________________________\n\n");
+        System.out.print(ANSI_RED + "The Hour is    -");
+        System.out.printf("%4d%n", h);
+        System.out.print("The Minute is  -");
+        System.out.printf("%4d%n", m);
+        System.out.print("The Second is  -");
+        System.out.printf("%4d%n", s);
+        System.out.print(ANSI_RESET);
     }
 }
-class empDemo{
+class timeDemo{
     public static void main(String[] args){
-        int n, choice;
-        Scanner s=new Scanner(System.in);
-        System.out.println("Enter the number of employees- ");
-        n=s.nextInt();
-        employee emp=new employee();
-        System.out.println("Inputting data-");
-        for(int i=0; i<n; i++){
-            emp.input(i);
-            emp.calc();
-            emp.display();
-        }
+        Scanner sc= new Scanner(System.in);
+        TIME t=new TIME();
+        int hh, mm, ss;
+        System.out.println("Enter Hours, Minutes, Seconds\n(Separated by whitespace)-");
+        hh = sc.nextInt();
+        mm = sc.nextInt();
+        ss = sc.nextInt();
+        t.currentTIME(hh,mm,ss);
+        int choice, cont;
+        do {
+            System.out.println("Choose the operation to perform-");
+            System.out.println("1. Advance (Add time)");
+            System.out.println("2. Display the Time");
+            System.out.println("3. Reenter Current Time");
+            choice=sc.nextInt();
+            switch(choice){
+                case 1:{
+                    System.out.println("Enter the time of advancing-");
+                    int x = sc.nextInt();
+                    int y = sc.nextInt();
+                    int z = sc.nextInt();
+                    t.add(x, y, z);
+                    t.display();
+                    break;
+                }
+                case 2:{
+                    t.display();
+                    break;
+                }
+                case 3:{
+                    System.out.println("Enter the new Time-");
+                    int p = sc.nextInt();
+                    int q = sc.nextInt();
+                    int r = sc.nextInt();
+                    t.currentTIME(p, q, r);
+                    break;
+                }
+                default:System.out.println("Invalid");
+            }
+            System.out.println("Do you want to repeat the operations?\n(1 for Yes) ");
+            cont = sc.nextInt();
+        }while(cont==1);
     }
 }

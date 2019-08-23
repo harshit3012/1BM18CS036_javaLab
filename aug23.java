@@ -27,18 +27,18 @@ class employee{
     }
     void display(){
         System.out.print("Employer name is");
-        System.out.printf("%50s\n", name);
-        System.out.print("Employer number of " + name + " is -");
-        System.out.printf("%50s\n", empnum);
-        System.out.print("Basic Salary of " + name + " is -");
-        System.out.printf("%50.3f\n", basic);
-        System.out.print("Dearness Allowance of "+ name + " is-");
-        System.out.printf("%50.3f\n", 0.75*basic);
+        System.out.printf("%61s\n", name);
+        System.out.print("Employer number is -");
+        System.out.printf("%53s\n", empnum);
+        System.out.print("Basic Salary is -");
+        System.out.printf("%56.3f\n", basic);
+        System.out.print("Dearness Allowance is-");
+        System.out.printf("%51.3f\n", 0.75*basic);
         System.out.print("Income Tax is -");
-        System.out.printf("%50.3f\n",it);
-        System.out.print("__________________________________________________");
-        System.out.print("\nNet Salary of " + name + " is -. ");
-        System.out.printf("%50.3f\n", ns);
+        System.out.printf("%67.3f\n",it);
+        System.out.print("_____________________________________________________________________________");
+        System.out.print("\nNet Salary is - ");
+        System.out.printf("%53.3f\n", ns);
     }
 }
 class aug23 {

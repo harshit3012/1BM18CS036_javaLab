@@ -1,4 +1,6 @@
 //Program to calculate the SGPA of a student
+//1BM18CS036
+//This program won't work in cmd and Powershell (They return runtime error) as colors are not supported by them 
 import java.util.*;
 class Stu{
     public static final String ANSI_RESET = "\u001B[0m";

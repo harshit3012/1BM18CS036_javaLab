@@ -1,9 +1,10 @@
 //Program to Calculate Net Salary of employers and Display them
 //1BM18CS036
+//This program won't work in cmd and Powershell (They return runtime error) as colors are not supported by them 
 import java.util.*;
 class TIME{
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m"; // ANSI Escape code to reset the IO Output color to default
+    public static final String ANSI_RED = "\u001B[31m";  // ANSI Escape code to change the IO Output color to Red
     int h, m, s;
     TIME(){
         h = 0;

@@ -1,4 +1,4 @@
-//
+//Program to calculate the SGPA of a student
 import java.util.*;
 class Stu{
     public static final String ANSI_RESET = "\u001B[0m";

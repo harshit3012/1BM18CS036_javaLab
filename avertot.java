@@ -1,3 +1,6 @@
+//Program to learn accessing 2D array with some places blank
+//This program gives a java runtime error in cmd, as I have implemented colors
+//1BM18CS036
 import java.util.*;
 class avertot {
     public static final String ANSI_RESET = "\u001B[0m";
@@ -41,9 +44,9 @@ class avertot {
         System.out.print(ANSI_RESET + "\nNow Displaying the results - \n\n_________| " + ANSI_RED);
         for (i = 1 ; i <= sub ; i++){
             String s = "S"+i;
-            System.out.printf("%-9s", s);     //Prints S1, S2, .. so on with proper spaces
+            System.out.printf("%-9s", s);               //Prints S1, S2, .. so on with proper spaces
         }
-        System.out.print("Total      Average\n");   //Prints Total and Average in the same line as S1, S2 etc
+        System.out.print("Total      Average\n");       //Prints Total and Average in the same line as S1, S2 etc
         for (i = 0 ; i < stu ; i++){
             System.out.print(ANSI_RED);
             System.out.printf("%-11s", "Student"+(i+1)); //Prints Student1, Student2 in the rows according to the loop

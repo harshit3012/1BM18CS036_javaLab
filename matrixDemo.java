@@ -1,5 +1,6 @@
 //Program to learn default constructor, zero argument instructor, and copy instructor
 //Program to learn boolean return functions
+//This program gives a java runtime error in cmd, as I have implemented colors (JRE 12 not released yet)
 //1BM18CS036
 import java.util.*;
 class Matrix{

@@ -1,4 +1,5 @@
 //Program to learn copy instructor
+//This program gives a java runtime error in cmd, as I have implemented colors (JRE 12 not released yet)
 //1BM18CS036
 import java.util.*;
 class Point {

@@ -1,10 +1,13 @@
+//Program to End Sort a set of integers in a line, separated by whitespace
+//As colors have been implemented in this code, this code can't be executed in CMD (can be executed in Bash terminal)
+//1BM18CS036
 import java.util.*;
 class endsort {
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_RESET = "\u001B[0m";
-    static void work(int array[], int smallest){
-        int a;
+    static void work(int array[], int smallest){                // This function shifts a particular element to the end, and the rest
+        int a;                                                  // are moved to form a continuous array.
         for (a = 0; a < (array.length - 1); a++){
             if(array[a] == smallest){
                 break;
@@ -44,7 +47,7 @@ class endsort {
         boolean done = false;
         while(!done){
             done = check(ints);
-            if(done){
+            if(done){                                   //Direct boolean as argument for if loop
                 break;
             }
             else {
@@ -54,13 +57,13 @@ class endsort {
                 for (i = 0; i < (ints.length - 1); i++) {
                     for (j = (i + 1); j < ints.length; j++) {
                         if (ints[i] > ints[j]) {
-                            smalls[no_of_smalls] = ints[i];
+                            smalls[no_of_smalls] = ints[i];         //appends all numbers that are to be shifted
                             no_of_smalls += 1;
                             break;
                         }
                     }
                 }
-                int smallest = 2147483647;              //This makes sure smallest is initialized
+                int smallest = 2147483647;              //This makes sure, int 'smallest' is initialized
                 for (k = 0; k < no_of_smalls ; k++){
                     if(k == 0){
                         smallest = smalls[0];

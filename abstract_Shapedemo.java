@@ -38,7 +38,7 @@ class Circle extends Shape{
         return;
     }
 }
-class shapedemo{
+class abstract_Shapedemo{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         Shape ob;

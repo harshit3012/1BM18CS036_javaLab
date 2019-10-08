@@ -9,6 +9,7 @@ class stastack implements Stack{
     int size = 5;
     int stack[] = new int[size];
     stastack(){
+        System.out.println("Initialized a stack with size 5");
     }
     public void push(){
         int inp;
@@ -60,7 +61,7 @@ class dynstack implements Stack {
         }
     }
 }
-class stackdemo {
+class stackTest {
     public static void main(String args[]) {
         int choice, choice1, done;
         Scanner sc = new Scanner(System.in);
@@ -81,8 +82,9 @@ class stackdemo {
                         break;
                     case 3:if(sst.top != -1) {
                                 for (int j = 0; j <= sst.top; j++) {
-                                    System.out.println(sst.stack[j]);
+                                    System.out.print(sst.stack[j] + "  ");
                                 }
+                                System.out.print("\n");
                            }
                            else
                                 System.out.println("Stack Empty");
@@ -99,8 +101,9 @@ class stackdemo {
                         break;
                     case 3:if(dst.top != -1) {
                                 for (int j = 0; j <= dst.top; j++) {
-                                    System.out.println(dst.stack[j]);
+                                    System.out.print(dst.stack[j] + "  ");
                                 }
+                                System.out.print("\n");
                             }
                             else
                                 System.out.println("Stack Empty");
@@ -108,6 +111,6 @@ class stackdemo {
                     case 4: return;
                 }
             }
-        } while (choice1!= 4 && (choice1 == 1 || choice1 == 2 || choice1 == 3));
+        } while (choice1!= 4);
     }
 }
